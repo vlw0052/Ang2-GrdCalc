@@ -1,5 +1,6 @@
 import {Injectable} from 'angular2/core';
 
+import {Course} from './Course';
 import {GradeSection} from './GradeSection';
 import {Assignment} from './Assignment';
 
@@ -27,6 +28,9 @@ export class GradesService {
 	changeGradeSectionName(id, name){
 		this.gradeSections[id].name = name; 
 	}
+
+	course = new Course(0, "Algebra", this.gradeSections);
+
 	gradeSections = 
 	[
 	new GradeSection(0,"my Homeworks",25,

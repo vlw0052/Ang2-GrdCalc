@@ -1,4 +1,4 @@
-System.register(['angular2/core', './GradeSection', './Assignment'], function(exports_1, context_1) {
+System.register(['angular2/core', './Course', './GradeSection', './Assignment'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,12 +10,15 @@ System.register(['angular2/core', './GradeSection', './Assignment'], function(ex
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, GradeSection_1, Assignment_1;
+    var core_1, Course_1, GradeSection_1, Assignment_1;
     var GradesService;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
+            },
+            function (Course_1_1) {
+                Course_1 = Course_1_1;
             },
             function (GradeSection_1_1) {
                 GradeSection_1 = GradeSection_1_1;
@@ -26,6 +29,7 @@ System.register(['angular2/core', './GradeSection', './Assignment'], function(ex
         execute: function() {
             GradesService = (function () {
                 function GradesService() {
+                    this.course = new Course_1.Course(0, "Algebra", this.gradeSections);
                     this.gradeSections = [
                         new GradeSection_1.GradeSection(0, "my Homeworks", 25, [new Assignment_1.Assignment(0, "hw1", 80),
                             new Assignment_1.Assignment(1, "hw2", 100),
