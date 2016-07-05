@@ -1,0 +1,67 @@
+<!-- Percent Group List -->
+<div id="pg-list" >
+	<h3 >Grade Distribution</h3>
+	<table class="sorted-table table">
+		<thead>
+			<tr>
+				<th class="col-xs-6 col-sm-4">Name</th>
+				<th class="hidden-xs col-sm-2">Points</th>
+				<th class="hidden-xs col-sm-2">Total # of points</th>
+				<th class="col-xs-6 col-sm-3">Percentage</th>
+			</tr>
+		</thead>
+		<!-- <h2>Your Window Width: <span id="width">	</span></h2> -->
+		<tbody id="p-groups">
+				<tr *ngFor="#gradeSection of gradeSections;">
+					<td>
+						<grade-section-name 
+						[name] = gradeSection.name 
+						[id] = gradeSection.id>
+							
+						</grade-section-name>
+					</td>
+						
+					<td>
+						<grade-section-perct
+							[perc] = gradeSection.perc 
+							[id] = gradeSection.id
+							(percentchange) = "changePerc($event)">
+						</grade-section-perct>
+					</td>
+					<td>
+						<grade-section-percb
+							[perc] = gradeSection.perc 
+							[id] = gradeSection.id>
+							
+						</grade-section-percb>
+					</td>
+					<td>
+						<grade-section-perc
+							[id] = gradeSection.id>
+							
+						</grade-section-perc>
+					</td>
+					
+				</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td ><input disabled type="text" class="form-control" value="Final Exam">
+				</td>
+				<td class="hidden-xs"><input type="number" class="points-top form-control" placeholder="90">
+				</td>
+				<td class="hidden-xs"><input type="number" class="points-bottom form-control" placeholder="100">
+				</td>
+				<td ><div class="input-group">
+					<input type="number" value="" class="f-percentage percentage form-control"><span class="input-group-addon">%</span>
+				</div>
+			</td>
+		</tr>
+	</tfoot>
+</table>
+<div id="percent-alert" class="alert alert-warning pull-right col-xs-3" role="alert">
+	<button class="close" data-dismiss="alert" aria-hidden="true">x</button>
+	Percentage Over 115!
+
+</div>
+</div>

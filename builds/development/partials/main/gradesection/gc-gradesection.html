@@ -1,0 +1,46 @@
+<thead>
+				<tr>
+					<th class="col-sm-3 col-xs-5">{{section.name}} </th>
+					<th class="hidden-xs col-sm-3">Points</th>
+					<th class="hidden-xs col-sm-3">Total # of points</th>
+					<th class="col-sm-3 col-xs-5">Percentage</th>
+					<th class="percent-each col-sm-2 col-xs-5">20% each.</th>
+				</tr>
+			</thead>
+			<tbody id="pg-assignments">
+			<tr *ngFor="#assignment of section.assignments;">
+					<td>
+						<input 
+						type="text" 
+						class="form-control" 
+						value="{{assignment.name}}" 
+						placeholder="Assignment">
+					</td>
+					<td class="hidden-xs">
+						<input 
+						type="number" 
+						class="points-top form-control" 
+						value="{{assignment.grade}}" 
+						placeholder="90">
+					</td>
+					<td class="hidden-xs">
+						<input 
+						type="number" 
+						class="points-bottom form-control" 
+						value="100"
+						placeholder="100">
+					</td>
+					<td >
+					<div class="input-group">
+						<input 
+						type="number" 
+						value="{{assignment.grade}}" 
+						class="percentage form-control"><span class="input-group-addon">%</span>
+					</div>
+					</td>
+					<td class="btn-group col-sm-2 col-xs-2"> 
+						<button id="add" class="btn btn-primary plus">+</button>
+						<button id="sub" class="btn btn-danger minus">-</button>
+					</td>
+				</tr>
+		</tbody>

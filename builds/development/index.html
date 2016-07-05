@@ -1,0 +1,44 @@
+<?php 
+  $_HOST = "localhost:8000";
+ ?>
+
+<html lang="en">
+
+  <head>
+    <link rel="icon" type="img/x-icon" href="img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="Grade calculator that helps college students calculate their grade with ease adding group list and assignments to each group.">
+    <title>Grade Calculator | Check what your grade is!</title>
+    <link href='http://fonts.googleapis.com/css?family=Asap:400,700|Varela+Round&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Just+Another+Hand|Fredericka+the+Great|Cabin+Sketch|Yanone+Kaffeesatz|Special+Elite' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/bootstrap-tour.min.css">
+    <link rel="stylesheet" href="css/gc.css">
+    <link rel="stylesheet" href="css/print.css" type="text/css" media="print">
+ 
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Polyfills and Shims for backwards capatibility -->
+    <script src="js/lib/angular2/es6-shim.min.js"></script> 
+    <script src="js/lib/angular2/system-polyfills.js"></script>
+    <script src="js/lib/angular2/angular2-polyfills.js"></script>
+    <!-- Module loader -->
+    <script src="js/lib/angular2/system.src.js"></script>
+    <script src="js/lib/angular2/Rx.js"></script>
+    <script src="js/lib/angular2/angular2.dev.js"></script>
+     <script>
+      System.config({
+        packages: {
+          js: {
+            format: 'register',
+            defaultExtension: 'js'
+          }
+        }
+      });
+      System.import('js/boot')
+        .then(null, console.error.bind(console));
+    </script>    
+  </head>
+<body>
+  <grd-calc>Doing Stuff</grd-calc>
+</body>
+</html>

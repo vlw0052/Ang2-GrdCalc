@@ -1,0 +1,32 @@
+<!-- Percent Group Tables -->
+<div id="pg-table">
+	<h3>Assignments</h3>
+		<table 
+			id="{{section.name}}" 
+			class="col-md-6 col-xs-12 table grade-table"
+			*ngFor="#section of gradeSections; #id=index;"
+			>
+			<grade-section [gradeSection]=section></grade-section>
+		</table>
+		<table id="final-group" class="col-md-6 col-xs-12 table grade-table">
+			<thead>
+				<tr>
+					<th class="col-sm-3 col-xs-5 nm">Final Exam</th>
+					<th class="col-sm-3 col-xs-5">Grade</th>
+					<th class="f-percent-each col-sm-2 col-xs-5">20% each.</th>
+				</tr>
+			</thead>
+			<tbody id="final-exam-grade">
+				<tr>
+					<td class="col-sm-2 col-xs-5"><input type="text" class="form-control" value="Final Exam Grade" disabled></td>
+					<td class="col-sm-1 col-xs-5">
+						<div class="input-group">
+							<input type="number" value="" class="percentage form-control"><span class="input-group-addon">%</span>
+						</div>
+					</td>
+					<td class="btn-group col-sm-2 col-xs-2"> 
+					</td>
+				</tr>
+			</tbody>
+		</table>
+</div>
