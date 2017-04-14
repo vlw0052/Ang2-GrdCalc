@@ -5,6 +5,6 @@ export class Course{
 	public id:number,
 	public name:string,
 	public gradeSections:GradeSection[]
-
+	public test:String = "Test Varible"
 	){}
 }
